@@ -16,9 +16,7 @@ return new class extends Migration
         Schema::create('order', function (Blueprint $table) {
             $table->id();
             $table->foreignId('customer_id')->nullable()->constrained('customers')->onDelete('cascade');
-            $table->double('total_price',15,8);
             $table->integer('order_status')->default(0);
-            $table->integer('payment_status')->default(0);
             $table->timestamps();
         });
     }
