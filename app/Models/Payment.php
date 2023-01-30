@@ -14,6 +14,6 @@ class Payment extends Model
         'customer_id',
         'total_price',
         'paid_by',
-        'status',
+        'payment_status',
     ];
 }

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('food_item', function (Blueprint $table) {
+        Schema::create('food_items', function (Blueprint $table) {
             $table->id();
             $table->string('item_name')->nullable();
             $table->double('price',15,8)->nullable();
