@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
 <div class="container">
@@ -15,6 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                        <a href="{{route('order.index')}}">{{ __('order status') }}</a>
                 </div>
             </div>
         </div>

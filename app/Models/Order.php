@@ -11,8 +11,16 @@ class Order extends Model
 
     protected $fillable = [
         'customer_id',
-        'total_price',
         'order_status',
-        'payment_status',
     ];
+
+    public function customer(){
+        return $this->belongsTo(Customer::class,'customer_id');
+    }
+    public function order_detail(){
+        return $this->hasOne(OrderDetail::class,'order_id');
+    }
+    public function payment(){
+        return $this->hasOne(Payment::class,'order_id');
+    }
 }
